@@ -5,11 +5,10 @@ const dbConnect = async () => {
         await mongoose.connect(process.env.MONGODB_CNN)
         console.log('Conection Success')
     } catch (e) {
-        console.log('e');
         throw new Error('Error Conection')
     }
 }
-
+ 
 module.exports = {
     dbConnect
 }
